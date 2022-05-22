@@ -1,5 +1,6 @@
 using Hangfire;
 using Hangfire.SqlServer;
+using HangfireWithMediatR.API.Extensions;
 using HangfireWithMediatR.API.Services;
 using HangfireWithMediatR.API.Services.Interfaces;
 
@@ -27,7 +28,8 @@ builder.Services.AddHangfire(configuration => configuration
         QueuePollInterval = TimeSpan.Zero,
         UseRecommendedIsolationLevel = true,
         DisableGlobalLocks = true
-    }));
+    })
+    .UseMediatR());
 
 builder.Services.AddHangfireServer();
 

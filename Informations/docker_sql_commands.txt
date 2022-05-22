@@ -7,3 +7,12 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Docker@Sql!1234" -p 1433:1433 -d m
 mssql -u sa -p Docker@Sql!1234
 
 SELECT @@VERSION;
+
+Git
+
+git init
+git add -A
+git commit -m 'Added my project'
+git remote add origin https://github.com/rafimk/HangfireWithMediatR.git
+git push -u -f origin master
+
